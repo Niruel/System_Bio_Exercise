@@ -32,8 +32,7 @@ if __name__ == "__main__":
     u_input_Text = input("Choose which plot you would like to see [1-3]:")
     u_input_num=int(u_input_Text)
     if(u_input_num==1):
-        Mandelbrot()
-        print("ne1")
+        Mandelbrot()     
     elif(u_input_num==2):
         ElephantValley()
     elif(u_input_num==3):
