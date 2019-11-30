@@ -53,10 +53,8 @@ def fitnessFunc2(competingDNA):
 """
 def fitnessFunc3(competingDNA):
     fitness = 0
-    competingDNA_List = [ord(c) for c in competingDNA]
-    DNATarget_List = [ord(t) for t in target]
     for i in range(dnaLen):
-           if competingDNA_List[i] != DNATarget_List[i]:
+           if competingDNA[i] != target[i]:
                fitness+=1
 
     return fitness
