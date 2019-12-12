@@ -52,8 +52,13 @@ for i in range(trainingNumber):
 
     #take sigmoid and do some math to satisfy the function
     #outputPerceptronLayer = sigmoid(x)
-    outputPerceptronLayer = sigmoid(2 * x)
-    #outputPerceptronLayer = sigmoid(0.5 * x)
+    '''
+    slopeChangeFactor   
+    Change to 2 for sigmoid slope times 2
+    change to .5 for other version of sigmoid slope
+    '''
+    slopeChangeFactor = 2
+    outputPerceptronLayer = sigmoid(slopeChangeFactor * x)
 
     roundedValue = np.round(
         outputPerceptronLayer,
@@ -65,7 +70,8 @@ for i in range(trainingNumber):
         break
     outputError = referenceOutput - outputPerceptronLayer
 
-    outputDelta = outputError * sigmoidSlope(outputPerceptronLayer)
+    outputDelta = outputError * slopeChangeFactor * (
+        sigmoidSlope(outputPerceptronLayer))
 
     weights01 += np.dot(inputLayer.T, outputDelta)
 
