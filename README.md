@@ -1,2 +1,2 @@
 # System_Bio_Exercise
-Practice to what is learned from System_Bio_Lecture
+This repository is based from a class at Ritsumeikan University where we are given at set of code exercises all build in python to simulate low level biological systems.
